@@ -1,0 +1,9 @@
+MVC
+
+The view and controller REFERENCE the model. Hence, they depend on the model 
+
+The controller also depends on the view 
+
+The model is Independent of both.
+
+In an API there is no view

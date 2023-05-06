@@ -1,0 +1,30 @@
+Rest is a shorthand for Representational State Transfer. It is an architectural style for distributed hypermedia systems.
+A Web API (or Web Service) that conforms to the REST Architectural style
+is a REST API.
+
+Concepts
+
+UNIFORM
+REST API generally has a UNIFORM INTERFACE. The URL and request appear uniform. Easy for a client to connect to an API and carry out various activities without needing too much alteration between procedures
+
+STATELESS
+Server cannot use any previously stored context information on the server
+
+CACHEABLE
+If the response is cacheable, the client app gets the right to reuse
+the response data later when making identical requests and specified method.
+
+LAYERED
+REST APIS help facilitate layered systems.
+
+
+RESOURCES
+A resource is anything that can be retrieved or interacted with by the API.
+Any data, metadata, hyper media file, etc.
+The client doesn't need to be exposed to what kind of resources the API is 
+interacting with, which the need for self description.
+
+SELF-DESCRIPTIVE
+
+
+

@@ -1,0 +1,25 @@
+Think CRUD
+
+PUT is used primarly to update an existing resource. If nonexistent, new resource created.
+
+PUT is used to update existing resource. If nonexistent, new resource created.
+
+POST allows the creation of new resources.
+
+HTTP Response Codes:
+
+1xx Status Code.
+Communicates transfer protocol-level information
+
+2xx Success
+Client's request was accepted successfully
+
+3xx Redirection
+Indicates that the client must take additional action 
+to complete requests
+
+4xx Client Error
+Client side error
+
+5xx Server Error
+Server side error

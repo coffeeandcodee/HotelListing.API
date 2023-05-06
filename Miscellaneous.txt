@@ -1,0 +1,10 @@
+Looking at Program.cs upon first creation of project. All the services to be configured 
+go between the builder declarion and the build command.The builde ris constructing all 
+of the services, anything that needs to be injected before or by the time app is run. 
+
+All the middleware stuff goes between the 
+var app = builder.Build() Declarion and the 
+app.Run()
+
+CORS is an acronym for Cross Origin Resource Sharing. It enables our API to be accessed by clients that are not 
+on the same server.

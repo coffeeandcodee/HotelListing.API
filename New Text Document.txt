@@ -1,0 +1,6 @@
+Looking at Program.cs upon first creation of project. All the services to be configured 
+go between the builder declarion and the build command.
+
+All the middleware stuff goes between the 
+var app = builder.Build() Declarion and the 
+app.Run()
