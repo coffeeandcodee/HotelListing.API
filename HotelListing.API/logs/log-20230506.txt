@@ -1,0 +1,10 @@
+2023-05-06 17:37:23.644 +01:00 [INF] Now listening on: https://localhost:7138
+2023-05-06 17:37:23.666 +01:00 [INF] Now listening on: http://localhost:5295
+2023-05-06 17:37:23.667 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-06 17:37:23.668 +01:00 [INF] Hosting environment: Development
+2023-05-06 17:37:23.668 +01:00 [INF] Content root path: C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API
+2023-05-06 17:38:57.981 +01:00 [INF] Now listening on: https://localhost:7138
+2023-05-06 17:38:58.006 +01:00 [INF] Now listening on: http://localhost:5295
+2023-05-06 17:38:58.008 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-06 17:38:58.009 +01:00 [INF] Hosting environment: Development
+2023-05-06 17:38:58.009 +01:00 [INF] Content root path: C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API
