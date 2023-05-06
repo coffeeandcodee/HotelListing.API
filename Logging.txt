@@ -1,2 +1,2 @@
 Logging is especially important for APIs, as APIs don't provide you an interface 
-to see what's happening
+to see what's happening.
