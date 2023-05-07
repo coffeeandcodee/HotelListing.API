@@ -8,3 +8,5 @@ app.Run()
 
 CORS is an acronym for Cross Origin Resource Sharing. It enables our API to be accessed by clients that are not 
 on the same server.
+
+Entity Framework is the flagship ORM (Object-relational mapping) tool for any dotnet project.
