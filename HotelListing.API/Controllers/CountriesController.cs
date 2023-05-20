@@ -47,6 +47,12 @@ public class CountriesController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<GetCountryDto>> GetCountry(int id)
     {
+
+        /* Before implementing repo:
+         * var country = await _context.Countries.Include(q => Hotels)
+         *      .FirstOrDefaultAsync(q => q.Id == id);
+         */
+
         var country = await _countriesRepository.GetAsync(id);
 
         if (country == null)
@@ -82,12 +88,12 @@ public class CountriesController : ControllerBase
         
         //RESUME HERE
         try
-        {   
-            await _context.SaveChangesAsync();
+        {
+            await _countriesRepository.UpdateAsync(country);
         }
         catch (DbUpdateConcurrencyException)
         {
-            if (!CountryExists(id))
+            if (!await CountryExists(id))
             {
                 return NotFound();
             }
@@ -109,8 +115,8 @@ public class CountriesController : ControllerBase
         //Maps createCountry to Country 
         var country = _mapper.Map<Country>(createCountry);
 
-        _context.Countries.Add(country);
-        await _context.SaveChangesAsync();
+        await _countriesRepository.AddAsync(country);
+ 
 
         return CreatedAtAction("GetCountry", new { id = country.Id }, country);
     }
@@ -119,20 +125,19 @@ public class CountriesController : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteCountry(int id)
     {
-        var country = await _context.Countries.FindAsync(id);
+        var country = await _countriesRepository.GetAsync(id);
         if (country == null)
         {
             return NotFound();
         }
 
-        _context.Countries.Remove(country);
-        await _context.SaveChangesAsync();
-
+        await _countriesRepository.DeleteAsync(id);
         return NoContent();
+        
     }
 
-    private bool CountryExists(int id)
+    private async Task<bool> CountryExists(int id)
     {
-        return _context.Countries.Any(e => e.Id == id);
+        return await _countriesRepository.Exists(id);
     }
 }
