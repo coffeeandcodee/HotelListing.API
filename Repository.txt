@@ -1,0 +1,10 @@
+The Repository Pattern is an abstraction of the Data Access Layer.
+It ensures the details of exactly how the data is saved or retrieved is hidden.
+The details of how the data is stored and retrieved is in the respective repository. 
+It can be seen that up until "Implement Repository Pattern - Part 1" in section 6, the Controller is 
+involved heavily in the decision making. 
+The controller should be receiving requests, route the request, then return data. It shouldn't 
+necessarily contain how data was retrieved or whatever formatting is applied. 
+
+This is analogous to a manager in a work place. The manager assigns tasks and expects results. They 
+are not cornced of details regarding the actual completion of the task.

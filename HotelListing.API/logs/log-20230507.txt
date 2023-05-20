@@ -489,3 +489,4 @@ Error Number:544,State:1,Class:16
 2023-05-07 21:18:39.901 +01:00 [INF] HTTP PUT /api/Countries/6 responded 415 in 2.8290 ms
 2023-05-07 21:18:44.335 +01:00 [INF] HTTP PUT /api/Countries/6 responded 415 in 0.3844 ms
 2023-05-07 21:18:53.555 +01:00 [INF] HTTP PUT /api/Countries/5 responded 415 in 0.4982 ms
+2023-05-07 21:27:41.957 +01:00 [INF] HTTP GET /api/Countries responded 200 in 52.8269 ms

@@ -1,0 +1,142 @@
+2023-05-08 10:14:13.899 +01:00 [INF] Now listening on: https://localhost:7138
+2023-05-08 10:14:13.930 +01:00 [INF] Now listening on: http://localhost:5295
+2023-05-08 10:14:13.932 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 10:14:13.933 +01:00 [INF] Hosting environment: Development
+2023-05-08 10:14:13.933 +01:00 [INF] Content root path: C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API
+2023-05-08 10:23:17.446 +01:00 [INF] Now listening on: https://localhost:7138
+2023-05-08 10:23:17.479 +01:00 [INF] Now listening on: http://localhost:5295
+2023-05-08 10:23:17.482 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 10:23:17.483 +01:00 [INF] Hosting environment: Development
+2023-05-08 10:23:17.483 +01:00 [INF] Content root path: C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API
+2023-05-08 10:25:32.755 +01:00 [INF] HTTP GET /api/Countries responded 200 in 1551.4157 ms
+2023-05-08 10:27:45.500 +01:00 [INF] Now listening on: https://localhost:7138
+2023-05-08 10:27:45.547 +01:00 [INF] Now listening on: http://localhost:5295
+2023-05-08 10:27:45.550 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 10:27:45.552 +01:00 [INF] Hosting environment: Development
+2023-05-08 10:27:45.553 +01:00 [INF] Content root path: C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API
+2023-05-08 10:56:18.322 +01:00 [INF] Now listening on: https://localhost:7138
+2023-05-08 10:56:18.344 +01:00 [INF] Now listening on: http://localhost:5295
+2023-05-08 10:56:18.346 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 10:56:18.346 +01:00 [INF] Hosting environment: Development
+2023-05-08 10:56:18.347 +01:00 [INF] Content root path: C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API
+2023-05-08 10:56:52.550 +01:00 [INF] Now listening on: https://localhost:7138
+2023-05-08 10:56:52.570 +01:00 [INF] Now listening on: http://localhost:5295
+2023-05-08 10:56:52.572 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 10:56:52.573 +01:00 [INF] Hosting environment: Development
+2023-05-08 10:56:52.573 +01:00 [INF] Content root path: C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API
+2023-05-08 11:05:10.724 +01:00 [INF] Now listening on: https://localhost:7138
+2023-05-08 11:05:10.751 +01:00 [INF] Now listening on: http://localhost:5295
+2023-05-08 11:05:10.753 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 11:05:10.754 +01:00 [INF] Hosting environment: Development
+2023-05-08 11:05:10.754 +01:00 [INF] Content root path: C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API
+2023-05-08 11:05:34.858 +01:00 [INF] HTTP GET /api/countries responded 200 in 1610.9991 ms
+2023-05-08 12:44:09.406 +01:00 [INF] Now listening on: https://localhost:7138
+2023-05-08 12:44:09.435 +01:00 [INF] Now listening on: http://localhost:5295
+2023-05-08 12:44:09.437 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 12:44:09.438 +01:00 [INF] Hosting environment: Development
+2023-05-08 12:44:09.438 +01:00 [INF] Content root path: C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API
+2023-05-08 12:48:18.218 +01:00 [INF] HTTP GET /api/Countries responded 200 in 1561.7510 ms
+2023-05-08 12:48:49.054 +01:00 [INF] HTTP GET /api/Countries responded 200 in 16.5370 ms
+2023-05-08 12:49:52.417 +01:00 [INF] HTTP GET /api/Countries responded 200 in 51.4077 ms
+2023-05-08 12:50:55.238 +01:00 [INF] HTTP GET /api/Countries responded 200 in 12.9202 ms
+2023-05-08 12:51:42.044 +01:00 [INF] HTTP GET /api/countries responded 200 in 4.5412 ms
+2023-05-08 12:51:54.061 +01:00 [ERR] HTTP GET /api/countries/1 responded 500 in 201.7996 ms
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Country -> GetCountryDto
+HotelListing.API.Data.Country -> HotelListing.API.Models.Country.GetCountryDto
+
+Type Map configuration:
+Country -> GetCountryDto
+HotelListing.API.Data.Country -> HotelListing.API.Models.Country.GetCountryDto
+
+Destination Member:
+Hotels
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Hotel -> GetHotelDto
+HotelListing.API.Data.Hotel -> HotelListing.API.Models.Country.GetHotelDto
+   at lambda_method117(Closure, Hotel, GetHotelDto, ResolutionContext)
+   at lambda_method116(Closure, Object, GetCountryDto, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method116(Closure, Object, GetCountryDto, ResolutionContext)
+   at HotelListing.API.Controllers.CountriesController.GetCountry(Int32 id)
+   at lambda_method70(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-05-08 12:51:54.076 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Country -> GetCountryDto
+HotelListing.API.Data.Country -> HotelListing.API.Models.Country.GetCountryDto
+
+Type Map configuration:
+Country -> GetCountryDto
+HotelListing.API.Data.Country -> HotelListing.API.Models.Country.GetCountryDto
+
+Destination Member:
+Hotels
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Hotel -> GetHotelDto
+HotelListing.API.Data.Hotel -> HotelListing.API.Models.Country.GetHotelDto
+   at lambda_method117(Closure, Hotel, GetHotelDto, ResolutionContext)
+   at lambda_method116(Closure, Object, GetCountryDto, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method116(Closure, Object, GetCountryDto, ResolutionContext)
+   at HotelListing.API.Controllers.CountriesController.GetCountry(Int32 id)
+   at lambda_method70(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-05-08 12:59:24.222 +01:00 [INF] Now listening on: https://localhost:7138
+2023-05-08 12:59:24.261 +01:00 [INF] Now listening on: http://localhost:5295
+2023-05-08 12:59:24.264 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 12:59:24.264 +01:00 [INF] Hosting environment: Development
+2023-05-08 12:59:24.265 +01:00 [INF] Content root path: C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API
+2023-05-08 12:59:47.297 +01:00 [INF] HTTP GET /api/countries responded 200 in 897.7128 ms
+2023-05-08 13:00:04.821 +01:00 [INF] HTTP GET /api/countries/1 responded 200 in 156.3757 ms
+2023-05-08 13:00:09.573 +01:00 [INF] HTTP GET /api/countries/2 responded 200 in 42.4846 ms
+2023-05-08 14:09:13.224 +01:00 [INF] Now listening on: https://localhost:7138
+2023-05-08 14:09:13.264 +01:00 [INF] Now listening on: http://localhost:5295
+2023-05-08 14:09:13.267 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 14:09:13.267 +01:00 [INF] Hosting environment: Development
+2023-05-08 14:09:13.268 +01:00 [INF] Content root path: C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API
+2023-05-08 14:20:20.886 +01:00 [INF] Now listening on: https://localhost:7138
+2023-05-08 14:20:20.923 +01:00 [INF] Now listening on: http://localhost:5295
+2023-05-08 14:20:20.925 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 14:20:20.927 +01:00 [INF] Hosting environment: Development
+2023-05-08 14:20:20.927 +01:00 [INF] Content root path: C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API
+2023-05-08 15:00:53.954 +01:00 [INF] HTTP GET /api/countries responded 200 in 1788.5274 ms
+2023-05-08 15:02:03.843 +01:00 [INF] HTTP PUT /api/countries/1 responded 204 in 162.6137 ms
+2023-05-08 15:02:09.454 +01:00 [INF] HTTP GET /api/countries/1 responded 200 in 119.0080 ms
+2023-05-08 15:02:20.827 +01:00 [INF] HTTP GET /api/countries responded 200 in 2.6395 ms

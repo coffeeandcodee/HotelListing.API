@@ -4,16 +4,16 @@ namespace HotelListing.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class RealTalkController : ControllerBase
+    public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<RealTalkController> _logger;
+        private readonly ILogger<WeatherForecastController> _logger;
 
-        public RealTalkController(ILogger<RealTalkController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
         }

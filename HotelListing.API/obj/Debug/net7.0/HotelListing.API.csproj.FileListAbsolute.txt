@@ -286,3 +286,5 @@ C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\ne
 C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

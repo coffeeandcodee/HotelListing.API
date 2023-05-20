@@ -6,61 +6,83 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HotelListing.API.Data;
+using HotelListing.API.Models.Country;
+using AutoMapper;
+using HotelListing.API.Contracts;
 
 namespace HotelListing.API.Controllers;
 
-//Controllers receive request and return response. This is the purpose of an API
+//RESUME AT PUT
+
 [Route("api/[controller]")]
 [ApiController]
 public class CountriesController : ControllerBase
 {
-    private readonly HotelListingDbContext _context;
+    
+    private readonly IMapper _mapper;
+    private readonly ICountriesRepository _countriesRepository;
 
-    //Controller Boiler Plate INJECTS DB context into controller seen in below constructor
-    //In program.cs, you can see on line 10 we have registered the DB context as part of our services.This gives us the ability to inject it in almost any file.
-    //This saves us from instantiating a new DB context
-    public CountriesController(HotelListingDbContext context)
+    //Controller Boiler Plate INJECTS INTERFACE OBJECT into controller seen in below constructor
+    //In program.cs, you can see on line 10 we have registered the INTERFACES as part of our services.This gives us the ability to inject it in almost any file.
+    //This saves us from instantiating new objects 
+    public CountriesController(IMapper mapper, ICountriesRepository countriesRepository)
     {
-        _context = context;
+        this._mapper = mapper;
+        this._countriesRepository = countriesRepository;
     }
 
     // GET: api/Countries
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Country>>> GetCountries()
+    public async Task<ActionResult<IEnumerable<GetCountriesDto>>> GetCountries()
     {
+        //The below is a query.
         //Equivalent to Select * from Countries
-        var countries = await _context.Countries.ToListAsync();
-        return Ok(countries);
+        var countries = await _countriesRepository.GetAllAsync();
+
+        var records = _mapper.Map<List<GetCountriesDto>>(countries);
+        return Ok(records);
     }
 
     // GET: api/Countries/5
     [HttpGet("{id}")]
-    public async Task<ActionResult<Country>> GetCountry(int id)
+    public async Task<ActionResult<GetCountryDto>> GetCountry(int id)
     {
-        var country = await _context.Countries.FindAsync(id);
+        var country = await _countriesRepository.GetAsync(id);
 
         if (country == null)
         {
             return NotFound();
         }
 
-        return Ok(country);
+        var countryDto = _mapper.Map<GetCountryDto>(country);
+
+        return Ok(countryDto);
     }
 
     // PUT: api/Countries/5
     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutCountry(int id, Country country)
+    public async Task<IActionResult> PutCountry(int id, UpdateCountryDto updateCountryDto)
     {
-        if (id != country.Id)
+        if (id != updateCountryDto.Id)
         {
             return BadRequest("Invalid Record Id");
         }
 
-        _context.Entry(country).State = EntityState.Modified;
-
-        try
+        ///_context.Entry(country).State = EntityState.Modified;
+        ///
+        var country = await _countriesRepository.GetAsync(id);
+        if(country == null)
         {
+            return NotFound();
+        }
+
+        ///Take details of first argument (updateCountryDto) and transfer them to second argument
+        _mapper.Map(updateCountryDto, country);
+        
+        //RESUME HERE
+        try
+        {   
             await _context.SaveChangesAsync();
         }
         catch (DbUpdateConcurrencyException)
@@ -81,8 +103,12 @@ public class CountriesController : ControllerBase
     // POST: api/Countries
     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
     [HttpPost]
-    public async Task<ActionResult<Country>> PostCountry(Country country)
+    public async Task<ActionResult<Country>> PostCountry(CreateCountryDto createCountry)
     {
+       
+        //Maps createCountry to Country 
+        var country = _mapper.Map<Country>(createCountry);
+
         _context.Countries.Add(country);
         await _context.SaveChangesAsync();
 
