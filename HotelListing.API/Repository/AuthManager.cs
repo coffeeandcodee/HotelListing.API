@@ -3,7 +3,6 @@ using HotelListing.API.Contracts;
 using HotelListing.API.Data;
 using HotelListing.API.Models.Users;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.IdentityModel.JsonWebTokens; //conflict created when adding line 118
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -20,6 +19,7 @@ namespace HotelListing.API.Repository
         private readonly IMapper _mapper;
         private readonly UserManager<ApiUser> _userManager;
         private readonly IConfiguration _configuration;
+        private readonly ILogger<AuthManager> _logger;
         private ApiUser _user;
 
         //To avoid repitition in Refresh methods
@@ -27,11 +27,12 @@ namespace HotelListing.API.Repository
         private const string _refreshToken = "RefreshToken";
 
         //Injecting configuration manager into AuthManager
-        public AuthManager(IMapper mapper, UserManager<ApiUser> userManager, IConfiguration configuration)
+        public AuthManager(IMapper mapper, UserManager<ApiUser> userManager, IConfiguration configuration, ILogger<AuthManager> logger)
         {
             this._mapper = mapper;
             this._userManager = userManager;
             this._configuration = configuration;
+            this._logger = logger;
         }
 
         //To create a refresh token means storing in the database that a token has been issued to the user
@@ -54,17 +55,19 @@ namespace HotelListing.API.Repository
 
         public async Task<AuthResponseDto> Login(LoginDto loginDto)
         {
-
+            _logger.LogInformation($"Looking for user with email {loginDto}");
             _user = await _userManager.FindByEmailAsync(loginDto.Email);
             bool isValidUser = await _userManager.CheckPasswordAsync(_user, loginDto.Password);
 
-            if(_user == null || isValidUser == false)
+            if (_user == null || isValidUser == false)
             {
+                _logger.LogWarning($"User with email {loginDto.Email} was not found");
                 return null;
             }
 
             //async methods must be awaited
             var token = await GenerateToken();
+            _logger.LogInformation($"Token generated for User with email {loginDto.Email} | Token: {token}");
 
             return new AuthResponseDto
             {
@@ -135,7 +138,7 @@ namespace HotelListing.API.Repository
                 };
 
             }
-             
+
             await _userManager.UpdateSecurityStampAsync(_user);
             return null;
         }

@@ -1,5 +1,8 @@
-﻿using HotelListing.API.Contracts;
+﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using HotelListing.API.Contracts;
 using HotelListing.API.Data;
+using HotelListing.API.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotelListing.API.Repository
@@ -7,10 +10,12 @@ namespace HotelListing.API.Repository
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         private readonly HotelListingDbContext _context;
+        private readonly IMapper _mapper;
 
-        public GenericRepository(HotelListingDbContext context)
+        public GenericRepository(HotelListingDbContext context, IMapper mapper)
         {
             this._context = context;
+            this._mapper = mapper;
         }
 
         public async Task<T> AddAsync(T entity)
@@ -18,7 +23,7 @@ namespace HotelListing.API.Repository
             await _context.AddAsync(entity);
             await _context.SaveChangesAsync();
             return entity;
-            
+
         }
 
         public async Task<bool> Exists(int id)
@@ -37,7 +42,7 @@ namespace HotelListing.API.Repository
 
         public async Task<T> GetAsync(int? id)
         {
-           if(id is null)
+            if (id is null)
             {
                 return null;
             }
@@ -59,8 +64,25 @@ namespace HotelListing.API.Repository
             var entity = await GetAsync(id);
             _context.Set<T>().Remove(entity);
             await _context.SaveChangesAsync();
-          
+
         }
 
+        public async Task<PagedResult<TResult>> GetAllAsync<TResult>(QSueryParameters queryParameters)
+        {
+            var totalSize = await _context.Set<T>().CountAsync();
+            var items = await _context.Set<T>().Skip(queryParameters.StartIndex).Take(queryParameters.PageSize)
+                //You can do mapping within Query
+                .ProjectTo<TResult>(_mapper.ConfigurationProvider)
+                .ToListAsync();
+
+            return new PagedResult<TResult>
+            {
+                Items = items,
+                PageNumber = queryParameters.StartIndex,
+                RecordNumber = queryParameters.PageSize,
+                TotalCount = totalSize
+            }
+
+        }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace HotelListing.API.Models.Hotels;
+﻿namespace HotelListing.API.Models.Hotels;
 
 
 public class HotelDto : BaseHotelDto

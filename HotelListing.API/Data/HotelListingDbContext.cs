@@ -27,7 +27,7 @@ public class HotelListingDbContext : IdentityDbContext<ApiUser>
     }
 
 
-        
-    
+
+
 
 }

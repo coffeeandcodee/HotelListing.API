@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using HotelListing.API.Contracts;
+using HotelListing.API.Data;
+using HotelListing.API.Models.Hotels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using HotelListing.API.Data;
-using AutoMapper;
-using HotelListing.API.Contracts;
-using HotelListing.API.Models.Hotels;
 
 namespace HotelListing.API.Controllers
 {
@@ -18,14 +13,14 @@ namespace HotelListing.API.Controllers
     {
         private readonly IHotelsRepository _hotelsRepository;
         private readonly IMapper _mapper;
-        
-       
 
-        public HotelsController(IHotelsRepository hotelsRepoository,IMapper mapper)
+
+
+        public HotelsController(IHotelsRepository hotelsRepoository, IMapper mapper)
         {
             _mapper = mapper;
             _hotelsRepository = hotelsRepoository;
-            
+
         }
 
         // GET: api/Hotels
@@ -79,7 +74,7 @@ namespace HotelListing.API.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (! await HotelExists(id))
+                if (!await HotelExists(id))
                 {
                     return NotFound();
                 }

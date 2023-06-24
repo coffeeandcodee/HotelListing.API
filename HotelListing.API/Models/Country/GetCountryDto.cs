@@ -6,7 +6,7 @@ public class GetCountryDto : BaseCountryDto
 {
 
     public int Id { get; set; }
- 
+
 
     //A DTO should never have a field that is directly related to our model type. 
     //DTOs should only communicate with DTOs.
@@ -15,4 +15,4 @@ public class GetCountryDto : BaseCountryDto
     public List<HotelDto> Hotels { get; set; }
 }
 
-  
+

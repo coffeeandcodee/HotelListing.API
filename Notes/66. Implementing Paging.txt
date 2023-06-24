@@ -1,0 +1,1 @@
+Paging allows clients to specify details about the data returned, such as number of records.

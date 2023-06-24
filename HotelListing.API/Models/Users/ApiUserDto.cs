@@ -9,7 +9,7 @@ namespace HotelListing.API.Models.Users
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
-        
+
     }
 
 }

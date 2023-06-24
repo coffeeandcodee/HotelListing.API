@@ -295,3 +295,5 @@ C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\ne
 C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll

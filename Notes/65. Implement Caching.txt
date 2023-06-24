@@ -1,0 +1,7 @@
+Response caching specifies creating a temporary store in between specifically get requests.
+.NET has caching built in and we can configure middleware that prrovides this kind of operation.
+
+Response caching can be made at the software level. This will put load on the server. 
+
+Bear in mind to avoid overwhelming machine with the cache storage.
+
