@@ -15,7 +15,6 @@ C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\obj\Debug\ne
 C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\obj\Debug\net7.0\HotelListing.API.AssemblyInfoInputs.cache
 C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\obj\Debug\net7.0\HotelListing.API.AssemblyInfo.cs
 C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\obj\Debug\net7.0\HotelListing.API.csproj.CoreCompileInputs.cache
-C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\obj\Debug\net7.0\HotelListing.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\obj\Debug\net7.0\HotelListing.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\obj\Debug\net7.0\staticwebassets\msbuild.HotelListing.API.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\obj\Debug\net7.0\staticwebassets\msbuild.build.HotelListing.API.props
@@ -302,3 +301,7 @@ C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\ne
 C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.OData.Edm.dll
 C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.OData.ModelBuilder.dll
 C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.Spatial.dll
+C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\HotelListing.API.Core.dll
+C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\HotelListing.API.Data.dll
+C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\HotelListing.API.Core.pdb
+C:\Users\Ahmed\OneDrive\Documents\HotelListing.API\HotelListing.API\bin\Debug\net7.0\HotelListing.API.Data.pdb
