@@ -39,11 +39,8 @@ public class CountriesController : ControllerBase
     {
         //The below is a query.
         //Equivalent to Select * from Countries
-        var countries = await _countriesRepository.GetAllAsync();
-
-     
-        var records = _mapper.Map<List<GetCountriesDto>>(countries);
-        return Ok(records);
+        var countries = await _countriesRepository.GetAllAsync<GetCountriesDto>();
+        return Ok(countries);
     }
 
     // GET: api/Countries/?StartIndex=0&pagesize=25&PageNumber=1
@@ -90,21 +87,12 @@ public class CountriesController : ControllerBase
             return BadRequest("Invalid Record Id");
         }
 
-        ///_context.Entry(country).State = EntityState.Modified;
-        ///
-        var country = await _countriesRepository.GetAsync(id);
-        if (country == null)
-        {
-            throw new NotFoundException(nameof(GetCountries), id);
-        }
-
-        ///Take details of first argument (updateCountryDto) and transfer them to second argument
-        _mapper.Map(updateCountryDto, country);
+    
 
         //RESUME HERE
         try
         {
-            await _countriesRepository.UpdateAsync(country);
+            await _countriesRepository.UpdateAsync(id, updateCountryDto );
         }
         catch (DbUpdateConcurrencyException)
         {
@@ -142,11 +130,7 @@ public class CountriesController : ControllerBase
     [Authorize(Roles = "Administrator")]
     public async Task<IActionResult> DeleteCountry(int id)
     {
-        var country = await _countriesRepository.GetAsync(id);
-        if (country == null)
-        {
-            throw new NotFoundException(nameof(GetCountries), id);
-        }
+       
 
         await _countriesRepository.DeleteAsync(id);
         return NoContent();

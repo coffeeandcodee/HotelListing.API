@@ -1,0 +1,4 @@
+Note I never replaced namespace names in the API.Core project from 
+HotelListing.API --> HotelListing.API.Core
+as detailed by Trevoir in "Project Architectural Changes" at the ~16 minute mark. 
+Be weary of potential side effects later on 
